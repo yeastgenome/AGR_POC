@@ -1,0 +1,11 @@
+{
+  "name": "convert_files",
+  "version": "1.0.0",
+  "description": "convert *txt tab deliminated files to json",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "felixgondwe",
+  "license": "MIT"
+}
