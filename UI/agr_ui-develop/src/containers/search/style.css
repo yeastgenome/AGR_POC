@@ -1,0 +1,131 @@
+.controlContainer {
+	float: right;
+	margin-top: 0.25rem;
+	width: 120px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.sortLabel {
+	margin-right: 0.5rem;
+}
+
+.searchLabel {
+	display: block;
+	margin-bottom: 0.25rem;
+}
+
+.control {
+	margin-right: 1rem;
+	display: inline-block;
+}
+
+.resultContainer {
+	margin-top: 1rem;
+}
+
+.tableContainer {
+	margin-top: 1rem;
+}
+
+.tableHeadCell {
+	text-transform: capitalize;
+}
+
+.tableEmpty {
+	padding: 1rem;
+	text-align: center;
+}
+
+.detailList mark, em {
+	background: yellow;
+}
+
+.detailContainer {
+	margin-left: 1rem;
+}
+
+.evidenceFootnote {
+	font-size: 0.65rem;
+}
+
+td > .detailContainer {
+	margin-left: 0;
+}
+
+.detailLabel {
+	text-transform: capitalize;
+}
+
+.detailValue {
+
+}
+
+.missingTerms .detailValue {
+  text-decoration: line-through;
+}
+
+.missingTerms {
+  color: #666;
+}
+
+.resultExplanation {
+  white-space: pre;
+  font-size: x-small;
+}
+
+.explanationButton {
+  margin-left: 2em;
+}
+
+.explanationList {
+  list-style-type: none;
+}
+
+.agrDownloadBtn {
+}
+
+.resultCatLabel {
+	float: right;
+}
+
+.resultLinkLabel {
+  display: inline;
+}
+
+.resultSpeciesLabel {
+  padding-left: 1em;
+}
+
+.totalPending {
+    width: 2rem;
+    height: 1rem;
+    background: #e2e2e2;
+    display: inline-block;
+    position: relative;
+    top: 0.2rem;
+}
+
+a > span > .sprite {
+	background-position-x: -2.25rem;
+}
+
+.sprite {
+	background-image: url(./agrSprite.png);
+	width: 1rem;
+	height: 1rem;
+	display: inline-block;
+	background-size: 335%;
+	background-repeat: no-repeat;
+	position: relative;
+	top: 0.25rem;
+}
+
+.resultSpeciesIcon {
+  float: right;
+  opacity: .4;
+}
+
+.clear {
+  clear: both;
+}

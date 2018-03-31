@@ -1,0 +1,20 @@
+{
+  "name": "convert_files",
+  "version": "1.0.0",
+  "description": "convert *txt tab deliminated files to json",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "default": "node index.js --i=test.txt --o=output/test.json --h --tf",
+    "custom": "node index.js --i=input/input.txt --o=output/output.json --h --tf"
+    
+  },
+  "author": "felixgondwe",
+  "license": "MIT",
+  "dependencies": {
+    "fs": "0.0.1-security",
+    "split": "^1.0.1",
+    "underscore": "^1.8.3",
+    "yargs": "^11.0.0"
+  }
+}

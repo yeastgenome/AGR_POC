@@ -1,0 +1,45 @@
+version: "2"
+
+services:
+  agr_elasticsearch:
+    container_name: agr_elasticsearch
+    image: agrdocker/agr_elasticsearch_env:develop
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+    networks:
+      - esnet
+    environment:
+      - http.host=0.0.0.0
+      - xpack.security.enabled=false
+
+  agr_indexer:
+    container_name: agr_indexer
+    image: agrdocker/agr_indexer_run:develop
+    networks:
+      - esnet
+
+networks:
+  esnet:
+
+
+
+app:
+  image: node:4
+  volumes:
+    - ./app:/app
+  links:
+    - neo4j_beta
+  ports:
+    - "13000:3000"
+  working_dir: /app
+  entrypoint: node app.js
+
+neo4j_beta:
+  image: neo4j:3.0
+  ports:
+   - "17474:7474"
+  volumes:
+    - ./db/dbms:/data/dbms
+
+

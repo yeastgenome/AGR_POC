@@ -1,0 +1,31 @@
+{
+    "data": [
+        {
+            "DOid": "DOID:10629",
+            "taxonId": "taxon:237561",
+            "objectRelation": {
+                "associationType": "is_implicated_in",
+                "objectType": "gene"
+            },
+            "objectId": "CGD:S000000037",
+            "dateAssigned": "2017-04-12T00:00:00-07:00",
+            "dataProvider": "CGD",
+            "with": [
+                "HGNC:4837"
+            ],
+            "evidence": {
+                "evidenceCodes": [
+                    "IMP",
+                    "ISS"
+                ],
+                "publication": {
+                    "pubMedId": "PMID:11827457"
+                }
+            }
+        }
+    ],
+    "metaData": {
+        "dateProduced": "2018-03-30T11:02:28.494185-07:00",
+        "dataProvider": "CGD"
+    }
+}

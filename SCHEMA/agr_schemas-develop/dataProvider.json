@@ -1,0 +1,14 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "MOD Species and Taxon Information",
+  "id": "dataProvider.json#",
+  "description": "An standard set of information regarding data source and taxon ids for the AGR.",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "dataProvider": {
+      "description": "The MOD, human, or other source of data. AGR currently supports the entities listed below.",
+      "enum": [ "FB", "MGI", "RGD", "SGD", "ZFIN", "WB", "HGNC", "DRSC" ]
+    }
+  }
+}
