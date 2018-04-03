@@ -11,7 +11,9 @@ from neo4j.v1 import GraphDatabase
 
 class AggregateLoader(object):
     def __init__(self, uri, useTestObject):
-        self.graph = GraphDatabase.driver(uri, auth=("neo4j", "neo4j"))
+        import pdb ; pdb.set_trace()
+        self.graph = GraphDatabase.driver(
+            uri, auth=("neo4j", "neo4j"), encrypted=False)
         # Set size of BGI, disease batches extracted from MOD JSON file
         # for creating Python data structure.
         self.batch_size = 5000
@@ -54,7 +56,7 @@ class AggregateLoader(object):
             start = time.time()
             for gene_list_of_entries in genes:
                 BGILoader(self.graph).load_bgi(gene_list_of_entries)
-                
+
                 c = c + len(gene_list_of_entries)
             end = time.time()
             print("Average: %sr/s" % (round(c / (end - start), 2)))
