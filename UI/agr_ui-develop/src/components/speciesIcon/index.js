@@ -1,7 +1,7 @@
 import React from 'react';
 
 import style from './style.css';
-
+/* eslint-disable */
 const SpeciesIcon = ({species, small, iconClass}) => {
   if (!species) {
     return null;

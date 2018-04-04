@@ -11,7 +11,7 @@ import { NON_HIGHLIGHTED_FIELDS } from '../../constants';
 import SpeciesIcon from '../../components/speciesIcon';
 
 const DEFAULT_FIELDS = ['symbol', 'name', 'synonyms', 'sourceHref', 'id', 'type'];
-
+/* eslint-disable */
 class ResultsList extends Component {
   renderHighlightedValues(highlight, fields) {
     let _data = highlight;
@@ -71,6 +71,7 @@ class ResultsList extends Component {
 
   renderEntry(d, i, fields) {
     let link = <a dangerouslySetInnerHTML={{ __html: d.display_name }} href={d.href} />;
+    debugger;
     return (
       <div className={style.resultContainer} key={`sr${i}`}>
         {this.renderHeader(d.category, link, d.species)}
@@ -88,9 +89,11 @@ class ResultsList extends Component {
     let topFields = ['name', 'synonyms'];
     let bottomFields = ['biotype'];
     let link = <Link to={`/gene/${d.id}`}><span dangerouslySetInnerHTML={{ __html: d.display_name }} /></Link>;
+
     return (
       <div className={style.resultContainer} key={`sr${i}`}>
         {this.renderHeader(d.category, link, d.species)}
+
           <SpeciesIcon iconClass={style.resultSpeciesIcon} species={d.speciesKey} />
           {this.renderDetailFromFields(d, topFields)}
           <div className={style.detailContainer}>
